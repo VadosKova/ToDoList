@@ -12,6 +12,16 @@ function TaskItem({ task, onDelete, onToggle, onUpdate }) {
     });
     setIsEditing(false);
   }
+
+  if (isEditing) {
+    return (
+      <div className={`task-item ${task.completed ? "completed" : ""}`}>
+        <input value={editTitle} onChange={(e) => setEditTitle(e.target.value)}/>
+        <textarea value={editDescription} onChange={(e) => setEditDescription(e.target.value)}/>
+        <button onClick={handleUpdate}>Save</button>
+      </div>
+    );
+  }
 }
 
 export default TaskItem;
