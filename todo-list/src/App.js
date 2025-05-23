@@ -28,6 +28,26 @@ function App() {
 
     setTasks(newTasks);
   };
+
+  const updateTask = (id, updatedTask) => {
+    const newTasks = [];
+
+    for (let i = 0; i < tasks.length; i++) {
+      if (tasks[i].id === id) {
+        newTasks.push({
+          id: tasks[i].id,
+          title: updatedTask.title,
+          description: updatedTask.description,
+          completed: tasks[i].completed,
+        });
+      } else {
+        newTasks.push(tasks[i]);
+      }
+    }
+
+    setTasks(newTasks);
+  };
+  
   return (
     <div className="app">
       
