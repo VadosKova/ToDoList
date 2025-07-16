@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
 import logo from './logo.svg';
@@ -6,6 +6,15 @@ import "./styles.css";
 
 function App() {
   const [tasks, setTasks] = useState([]);
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    document.body.classList.toggle("dark-theme", isDark);
+  }, [isDark]);
+
+  const toggleTheme = () => {
+    setIsDark((prev) => !prev);
+  };
 
   const addTask = (newTask) => {
     setTasks([...tasks, { ...newTask, id: Date.now(), completed: false }]);
