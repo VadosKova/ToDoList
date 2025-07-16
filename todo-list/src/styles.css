@@ -122,3 +122,30 @@ h1 {
     font-size: 14px;
   }
 }
+
+.theme-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.theme-toggle svg {
+  width: 24px;
+  height: 24px;
+}
+
+body.dark-theme .theme-toggle {
+  background-color: #fff;
+}
