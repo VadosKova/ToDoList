@@ -52,6 +52,14 @@ function App() {
 
     setTasks(newTasks);
   };
+
+  return (
+    <div className="app">
+      <h1>📝 TO-DO List</h1>
+      <TaskForm onAdd={addTask} />
+      <TaskList tasks={tasks} onDelete={deleteTask} onToggle={toggleComplete} onUpdate={updateTask}/>
+    </div>
+  );
 }
 
 export default App;
