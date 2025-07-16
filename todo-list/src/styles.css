@@ -19,3 +19,33 @@ h1 {
   text-align: center;
   color: #333;
 }
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-form input,
+.task-form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.task-form button {
+  padding: 10px;
+  font-size: 16px;
+  background: #102ed8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.task-form button:hover {
+  background: #16a5fd;
+}
