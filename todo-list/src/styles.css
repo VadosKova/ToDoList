@@ -97,3 +97,28 @@ h1 {
   text-align: center;
   color: #888;
 }
+
+@media (max-width: 600px) {
+  .app {
+    padding: 10px;
+  }
+
+  .task-form input,
+  .task-form textarea {
+    font-size: 14px;
+  }
+
+  .task-form button,
+  .task-actions button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .task-item h3 {
+    font-size: 16px;
+  }
+
+  .task-item p {
+    font-size: 14px;
+  }
+}
