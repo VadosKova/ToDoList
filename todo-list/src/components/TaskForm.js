@@ -12,4 +12,14 @@ function TaskForm({ onAdd }) {
     setTitle("");
     setDescription("");
   };
+
+  return (
+    <form className="task-form" onSubmit={handleSubmit}>
+      <input type="text" placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)} required/>
+      <textarea placeholder="What you need to do?" value={description} onChange={(e) => setDescription(e.target.value)}/>
+      <button type="submit">Add task</button>
+    </form>
+  );
 }
+
+export default TaskForm;
