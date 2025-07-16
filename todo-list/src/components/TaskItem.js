@@ -22,4 +22,20 @@ function TaskItem({ task, onDelete, onToggle, onUpdate }) {
       </div>
     );
   }
+
+  return (
+    <div className={`task-item ${task.completed ? "completed" : ""}`}>
+      <h3>{task.title}</h3>
+      <p>{task.description}</p>
+      <div className="task-actions">
+        <button onClick={() => onToggle(task.id)}>
+          {task.completed ? "↩️ Cancel" : "✅ Done"}
+        </button>
+        <button onClick={() => setIsEditing(true)}>✏️ Edit</button>
+        <button onClick={() => onDelete(task.id)}>🗑️ Remove</button>
+      </div>
+    </div>
+  );
 }
+
+export default TaskItem;
