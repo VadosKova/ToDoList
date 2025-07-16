@@ -49,3 +49,9 @@ h1 {
 .task-form button:hover {
   background: #16a5fd;
 }
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
